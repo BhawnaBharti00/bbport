@@ -1,153 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Edit by Bhawan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation by Bhawna Check</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #fff;
-      color: #222;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      color: #f1f1f1;
+      scroll-behavior: smooth;
+    }
+    header, section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
     header {
-      background: #f4f4f4;
-      padding: 40px;
+      background: #1f1f1f;
       text-align: center;
     }
     header img {
       max-width: 200px;
-      border-radius: 16px;
-    }
-    h1 {
+      border-radius: 50%;
       margin-top: 20px;
-      font-size: 2.5rem;
     }
-    section {
-      padding: 40px 20px;
+    section h2 {
+      margin-bottom: 20px;
+      color: #ffcc70;
     }
-    .grid {
+    .projects, .tools {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-    .grid img, .grid video {
+    .projects img, .projects video {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 10px;
     }
-    footer {
-      background: #222;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    .tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-    .tools span {
-      background: #eee;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-weight: bold;
+    .tools li {
+      background: #333;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
     }
     .button {
-      background: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #25D366;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
+    }
+    footer {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    a {
+      color: #57b3ff;
     }
   </style>
 </head>
 <body>
-
-  <!-- HERO SECTION -->
-  <header>
-    <img src="your-image.jpg" alt="Bhawan Main">
-    <h1>Welcome to Edit by Bhawan</h1>
+  <header id="hero">
+    <h1>Welcome to Animation by Bhawan Check</h1>
+    <img src="momo-face.gif" alt="Bhawan profile" />
+    <p>Animation | Illustration | Graphic Art | Storyboard Arts</p>
   </header>
 
-  <!-- ANIMATION PROJECTS -->
-  <section>
+  <section id="animation-projects">
     <h2>Animation Projects</h2>
-    <div class="grid">
-      <img src="project1.jpg" alt="Animation 1">
-      <img src="project2.jpg" alt="Animation 2">
-      <img src="project3.jpg" alt="Animation 3">
-    </div>
-  </section>
-
-  <!-- YOUTUBE EDITS -->
-  <section>
-    <h2>YouTube Edits</h2>
-    <div class="grid">
+    <div class="projects">
       <video controls>
-        <source src="edit1.mp4" type="video/mp4">
-      </video>
-      <video controls>
-        <source src="edit2.mp4" type="video/mp4">
+        <source src="rigged cloths_3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
     </div>
   </section>
 
-  <!-- WEDDING EDITS -->
-  <section>
-    <h2>Wedding Edits</h2>
-    <div class="grid">
-      <img src="wedding1.jpg" alt="Wedding 1">
-      <img src="wedding2.jpg" alt="Wedding 2">
+  <section id="illustrations">
+    <h2>Illustration</h2>
+    <div class="projects">
+      <img src="elements-2.gif" alt="Illustration 1" />
+      <img src="pot.gif" alt="Illustration 2" />
     </div>
   </section>
 
-  <!-- TOOLS I USE -->
-  <section>
+  <section id="some-tests">
+    <h2>Some Tests</h2>
+    <p>Emotions that tell stories.</p>
+    <div class="projects">
+      <img src="momo-face.gif" alt="Sample 1" />
+      <img src="pot.gif" alt="Sample 2" />
+    </div>
+  </section>
+
+  <section id="tools">
     <h2>Tools I Use</h2>
-    <div class="tools">
-      <span>Adobe Premiere Pro</span>
-      <span>Adobe Animate</span>
-      <span>After Effects</span>
-      <span>Illustrator</span>
-      <span>Blender</span>
-    </div>
+    <ul class="tools">
+      <li>Adobe Animate</li>
+      <li>Adobe Illustrator</li>
+      <li>Adobe After Effects</li>
+      <li>Figma</li>
+    </ul>
   </section>
 
-  <!-- BOOK YOUR EDIT -->
-  <section>
-    <h2>Book Your Edit</h2>
-    <p>
-      Want to work together? Let’s connect on WhatsApp or Razorpay:
-    </p>
-    <a class="button" href="https://wa.me/yourwhatsapplink" target="_blank">
-      📱 WhatsApp Me
-    </a>
-    <br>
-    <a class="button" href="https://razorpay.me/yourpaymentlink" target="_blank" style="background:#6366F1">
-      💳 Pay on Razorpay
-    </a>
+  <section id="book">
+    <h2>Book Your Fun Sample</h2>
+    <a href="https://wa.me/919263300290" class="button" target="_blank">Book via WhatsApp</a>
   </section>
 
-  <!-- CONTACT -->
-  <footer>
-    <p>Contact me at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>Behance: 
-      <a href="https://www.behance.net/yourbehanceusername" target="_blank">
-        behance.net/yourbehanceusername
-      </a>
+  <footer id="contact">
+    <p>Contact: bhartibhawna4488@example.com | <a href="https://wa.me/919263300290">WhatsApp</a></p>
+    <p>View my work on Behance:
+      <a href="https://www.behance.net/bhawnabharti48" target="_blank">behance.net/bhawnabharti48</a>
     </p>
-    <p>WhatsApp: <a href="https://wa.me/yourwhatsapplink" target="_blank">Chat Now</a></p>
+    <p>&copy; 2025 Edit by Bhawan</p>
   </footer>
-
 </body>
 </html>
