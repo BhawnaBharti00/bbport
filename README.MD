@@ -1,136 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhawan’s Animation Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Edit by Bhawan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #121212;
-      color: #f1f1f1;
-      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #fff;
+      color: #222;
     }
     header {
-      height: 100vh;
-      background: linear-gradient(to bottom right, #1f1f1f, #0a0a0a);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      background: #f4f4f4;
+      padding: 40px;
       text-align: center;
-      padding: 20px;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #ffcc70;
-      animation: fadeIn 2s ease-out;
     }
     header img {
-      width: 150px;
-      border-radius: 50%;
-      margin: 20px 0;
-      box-shadow: 0 0 20px #ffcc70;
+      max-width: 200px;
+      border-radius: 16px;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
     }
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeInUp 1s ease-out;
+      padding: 40px 20px;
     }
-    h2 {
-      margin-bottom: 20px;
-      color: #ffcc70;
-    }
-    .projects {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-    .card {
-      background: #1f1f1f;
-      padding: 10px;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img, .card video {
+    .grid img, .grid video {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
     }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
+    footer {
+      background: #222;
+      color: white;
+      padding: 30px;
+      text-align: center;
     }
-    .modal-content {
-      max-width: 90%;
-      max-height: 90%;
+    a {
+      color: #0077cc;
+      text-decoration: none;
     }
-    .modal.show {
+    .tools {
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .tools span {
+      background: #eee;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: bold;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
+    .button {
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
+  <!-- HERO SECTION -->
   <header>
-    <h1>Animation by Bhawan</h1>
-    <img src="momo-face.gif" alt="Bhawan Profile" />
-    <p>Where Art Comes to Life</p>
+    <img src="your-image.jpg" alt="Bhawan Main">
+    <h1>Welcome to Edit by Bhawan</h1>
   </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card" onclick="openModal('rigged_cloths_3.mp4', true)">
-        <video src="rigged_cloths_3.mp4" muted autoplay loop></video>
-      </div>
-      <div class="card" onclick="openModal('elements-2.gif', false)">
-        <img src="elements-2.gif" alt="Illustration" />
-      </div>
+  <!-- ANIMATION PROJECTS -->
+  <section>
+    <h2>Animation Projects</h2>
+    <div class="grid">
+      <img src="project1.jpg" alt="Animation 1">
+      <img src="project2.jpg" alt="Animation 2">
+      <img src="project3.jpg" alt="Animation 3">
     </div>
   </section>
 
-  <div class="modal" id="modal">
-    <div class="modal-content" id="modalContent"></div>
-  </div>
+  <!-- YOUTUBE EDITS -->
+  <section>
+    <h2>YouTube Edits</h2>
+    <div class="grid">
+      <video controls>
+        <source src="edit1.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="edit2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
 
-  <script>
-    const modal = document.getElementById('modal');
-    const modalContent = document.getElementById('modalContent');
+  <!-- WEDDING EDITS -->
+  <section>
+    <h2>Wedding Edits</h2>
+    <div class="grid">
+      <img src="wedding1.jpg" alt="Wedding 1">
+      <img src="wedding2.jpg" alt="Wedding 2">
+    </div>
+  </section>
 
-    function openModal(src, isVideo) {
-      modal.innerHTML = isVideo ?
-        <video controls autoplay src="${src}" style="max-width:100%; border-radius:10px;"></video> :
-        <img src="${src}" style="max-width:100%; border-radius:10px;">;
-      modal.classList.add('show');
-    }
+  <!-- TOOLS I USE -->
+  <section>
+    <h2>Tools I Use</h2>
+    <div class="tools">
+      <span>Adobe Premiere Pro</span>
+      <span>Adobe Animate</span>
+      <span>After Effects</span>
+      <span>Illustrator</span>
+      <span>Blender</span>
+    </div>
+  </section>
 
-    modal.addEventListener('click', () => {
-      modal.classList.remove('show');
-      modal.innerHTML = '';
-    });
-  </script>
+  <!-- BOOK YOUR EDIT -->
+  <section>
+    <h2>Book Your Edit</h2>
+    <p>
+      Want to work together? Let’s connect on WhatsApp or Razorpay:
+    </p>
+    <a class="button" href="https://wa.me/yourwhatsapplink" target="_blank">
+      📱 WhatsApp Me
+    </a>
+    <br>
+    <a class="button" href="https://razorpay.me/yourpaymentlink" target="_blank" style="background:#6366F1">
+      💳 Pay on Razorpay
+    </a>
+  </section>
+
+  <!-- CONTACT -->
+  <footer>
+    <p>Contact me at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>Behance: 
+      <a href="https://www.behance.net/yourbehanceusername" target="_blank">
+        behance.net/yourbehanceusername
+      </a>
+    </p>
+    <p>WhatsApp: <a href="https://wa.me/yourwhatsapplink" target="_blank">Chat Now</a></p>
+  </footer>
+
 </body>
 </html>
